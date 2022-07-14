@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/*Header styles*/
+header {
+  display: flex;
+  background-color: #061036;
+  height: 10vh;
+  padding: 0 10vw;
+}
+
+#company-logo {
+  display: flex;
+  color: white;
+  align-items: center;
+  font-size: 30px;
+}
+
+/*Page styles*/
+#page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 100vw;
+}
+
+#main-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5vh 20vw;
+}
+
+h3 {
+  margin-bottom: 20px;
+}
+
+/*Form styles*/
+#form-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-form-container {
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.input-style {
+  height: 30px;
+  border: 1px solid #bebebe;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.two-inputs-container {
+  display: flex;
+  height: 50px;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.average-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.average-input {
+  height: 30px;
+  width: 100%;
+  border: 1px solid #bebebe;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+#event-container {
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.event-input {
+  height: 30px;
+  width: 120px;
+  border: 1px solid #bebebe;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+/*Button*/
+#submit-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  width: 120px;
+  height: 30px;
+  border: none;
+  border-radius: 4px;
+  background-color: #50c86e;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #289844;
+}

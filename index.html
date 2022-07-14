@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Netpark - um bom dia, todos os dias</title>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LdgLucgAAAAAGOn0l3Al1IXBGAQqIVQUvCkSAjJ"></script>
+</head>
+
+<body>
+
+  <div id="page-container">
+    <header>
+      <div id="company-logo">Netpark</div>
+    </header>
+
+    <main>
+      <div id="main-container">
+        <h3>Preencha o formulário</h3>
+
+        <form id="form-container" action="?" method="POST">
+          <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+          <input type="hidden" name="action" value="validate_captcha">
+
+          <div class="two-inputs-container">
+            <div class="average-container">
+              <label for="companyName">Company name</label>
+              <input type="text" class="input-style" name="companyName" required>
+            </div>
+
+            <div class="input-form-container">
+              <label for="companyCnpj">Company CNPJ</label>
+              <input type="text" class="input-style" name="companyCnpj" required>
+            </div>
+          </div>
+
+          <div class="input-form-container">
+            <label for="businessName">Business name</label>
+            <input type="text" class="input-style" name="businessName" required>
+          </div>
+
+          <div class="two-inputs-container">
+            <div class="average-container">
+              <label for="businessEmail">Business email</label>
+              <input type="email" class="average-input" name="businessEmail"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="example@example.com" required>
+            </div>
+
+            <div class="input-form-container">
+              <label for="businessPhone">Business phone</label>
+              <input type="text" class="input-style" name="businessPhone" required>
+            </div>
+          </div>
+
+          <div class="input-form-container">
+            <label for="financialName">Financial name</label>
+            <input type="text" class="input-style" name="financialName" required>
+          </div>
+
+          <div class="two-inputs-container">
+            <div class="average-container">
+              <label for="financialEmail">Financial email</label>
+              <input type="email" class="average-input" name="businessEmail"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="example@example.com" required>
+            </div>
+
+            <div class="input-form-container">
+              <label for="financialPhone">Financial phone</label>
+              <input type="text" class="input-style" name="financialPhone" required>
+            </div>
+          </div>
+
+          <div class="input-form-container">
+            <label for="contract">Contract</label>
+            <input type="text" class="input-style" name="contract" required>
+          </div>
+
+          <div class="two-inputs-container">
+            <div class="average-container">
+              <label for="address">Address</label>
+              <input type="text" class="average-input" name="address" required>
+            </div>
+
+            <div class="input-form-container">
+              <label for="addressNumber">Address number</label>
+              <input type="number" class="input-style" name="addressNumber" required>
+            </div>
+          </div>
+
+          <div class="two-inputs-container">
+            <div class="average-container">
+              <label for="city">City</label>
+              <input type="text" class="average-input" name="city" required>
+            </div>
+
+            <div class="input-form-container">
+              <label for="state">State</label>
+              <input type="text" class="input-style" name="state" required>
+            </div>
+          </div>
+
+          <div class="two-inputs-container">
+            <div class="average-container">
+              <label for="country">Country</label>
+              <input type="" class="average-input" name="country" required>
+            </div>
+
+            <div class="input-form-container">
+              <label for="zipCode">Zip Code</label>
+              <input type="number" class="input-style" name="zipCode" required>
+            </div>
+          </div>
+
+          <div id="event-container">
+            <div class="input-form-container">
+              <label for="eventDay">Event day</label>
+              <input type="date" class="event-input" name="eventDay" required>
+            </div>
+
+            <div class="input-form-container">
+              <label for="timeDayInitial">Initial time</label>
+              <input type="time" class="event-input" name="timeDayInitial" required>
+            </div>
+
+            <div class="input-form-container">
+              <label for="timeDayFinal">Final time</label>
+              <input type="time" class="event-input" name="timeDayFinal" required>
+            </div>
+
+            <div class="input-form-container">
+              <label for="qtyGuest">Guest quantity</label>
+              <input type="number" class="event-input" name="qtyGuest" required>
+            </div>
+          </div>
+
+          <!-- Não obrigatórios -->
+
+          <div class="two-inputs-container">
+            <div class="average-container">
+              <label for="companyName">Pay company name</label>
+              <input type="text" class="input-style" name="payCompanyName">
+            </div>
+
+            <div class="input-form-container">
+              <label for="companyName">Pay company CNPJ</label>
+              <input type="text" class="input-style" name="payCompanyCnpj">
+            </div>
+          </div>
+
+          <div class="input-form-container">
+            <label for="companyName">Pay email</label>
+            <input type="text" class="input-style" name="payEmail">
+          </div>
+
+          <div class="input-form-container">
+            <label for="companyName">Pay contract name</label>
+            <input type="text" class="input-style" name="payContractName">
+          </div>
+
+          <div class="input-form-container">
+            <label for="companyName">Pay contract email</label>
+            <input type="text" class="input-style" name="payContractEmail">
+          </div>
+
+          <div class="input-form-container">
+            <label for="companyName">General Observations</label>
+            <input type="text" class="input-style" name="generalObservations">
+          </div>
+
+
+          <div id="submit-button-container">
+            <button>Enviar</button>
+          </div>
+        </form>
+
+      </div>
+    </main>
+
+    <footer>
+
+    </footer>
+  </div>
+</body>
