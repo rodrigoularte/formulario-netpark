@@ -19,21 +19,20 @@
 
     <main>
       <div id="main-container">
-        <h3>Preencha o formulário</h3>
+        <h3>Fill the form</h3>
 
-        <form id="form-container" action="?" method="POST">
-          <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
-          <input type="hidden" name="action" value="validate_captcha">
-
+        <form id="form-container" onsubmit="onSubmitForm()">
           <div class="two-inputs-container">
             <div class="average-container">
               <label for="companyName">Company name</label>
-              <input type="text" class="input-style" name="companyName" required>
+              <input type="text" class="input-style" name="companyName" id="companyName" required>
             </div>
 
             <div class="input-form-container">
               <label for="companyCnpj">Company CNPJ</label>
-              <input type="text" class="input-style" name="companyCnpj" required>
+              <input type="text" class="input-style" name="companyCnpj"
+                pattern="([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})" title="XX.XXX.XXX/0001-XX"
+                required>
             </div>
           </div>
 
@@ -75,7 +74,7 @@
 
           <div class="input-form-container">
             <label for="contract">Contract</label>
-            <input type="text" class="input-style" name="contract" required>
+            <input type="text" class="input-style" name="contract" pattern="[0-9]{3}" title="3 numbers required" required>
           </div>
 
           <div class="two-inputs-container">
@@ -110,7 +109,7 @@
 
             <div class="input-form-container">
               <label for="zipCode">Zip Code</label>
-              <input type="number" class="input-style" name="zipCode" required>
+              <input type="text" class="input-style" name="zipCode" pattern="^[0-9]{5}-[0-9]{3}$" title="XXXXX-XXX" required>
             </div>
           </div>
 
@@ -137,7 +136,10 @@
           </div>
 
           <!-- Não obrigatórios -->
-
+          <hr>
+          <br>
+          <p>Not required fields</p>
+          <br>
           <div class="two-inputs-container">
             <div class="average-container">
               <label for="companyName">Pay company name</label>
@@ -146,13 +148,13 @@
 
             <div class="input-form-container">
               <label for="companyName">Pay company CNPJ</label>
-              <input type="text" class="input-style" name="payCompanyCnpj">
+              <input type="text" class="input-style" name="payCompanyCnpj" pattern="([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})" title="XX.XXX.XXX/0001-XX">
             </div>
           </div>
 
           <div class="input-form-container">
             <label for="companyName">Pay email</label>
-            <input type="text" class="input-style" name="payEmail">
+            <input type="text" class="input-style" name="payEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="example@example.com">
           </div>
 
           <div class="input-form-container">
@@ -162,7 +164,7 @@
 
           <div class="input-form-container">
             <label for="companyName">Pay contract email</label>
-            <input type="text" class="input-style" name="payContractEmail">
+            <input type="text" class="input-style" name="payContractEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="example@example.com">
           </div>
 
           <div class="input-form-container">
@@ -172,15 +174,22 @@
 
 
           <div id="submit-button-container">
-            <button>Enviar</button>
+            <button
+            class="g-recaptcha"
+            data - sitekey="reCAPTCHA_site_key"
+            data - callback='onSubmit'
+            data - action='submit'
+            >Submit</button>
           </div>
         </form>
 
+        <script src="submit.js">
+          function onSubmit(token) {
+            document.getElementById("demo-form").submit()
+          }
+        </script>
+
       </div>
     </main>
-
-    <footer>
-
-    </footer>
   </div>
 </body>
