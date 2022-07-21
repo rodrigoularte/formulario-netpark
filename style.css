@@ -65,6 +65,13 @@ label {
   padding: 4px;
 }
 
+.input-style-not-required {
+  height: 30px;
+  border: 1px solid #bebebe;
+  border-radius: 4px;
+  padding: 4px;
+}
+
 .two-inputs-container {
   display: flex;
   height: 50px;
@@ -80,27 +87,11 @@ label {
   justify-content: space-between;
 }
 
-.average-input {
-  height: 30px;
-  width: 100%;
-  border: 1px solid #bebebe;
-  border-radius: 4px;
-  padding: 4px;
-}
-
 #event-container {
   display: flex;
   height: 50px;
   justify-content: space-between;
   margin-bottom: 20px;
-}
-
-.event-input {
-  height: 30px;
-  width: 120px;
-  border: 1px solid #bebebe;
-  border-radius: 4px;
-  padding: 4px;
 }
 
 /*Button*/
